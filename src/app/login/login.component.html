@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+
+      <div class="container d-flex flex-column">
+        <div class="row align-items-center justify-content-center gx-0 min-vh-100">
+          <div class="col-12 col-md-5 col-lg-4 py-8 py-md-11">
+
+            <!-- Heading -->
+            <h1 class="mb-0 fw-bold text-center text-primary">
+              Login
+            </h1>
+
+            <!-- Text -->
+            <p class="mb-6 text-center text-muted">
+            </p>
+
+            <!-- Form -->
+            <form class="mb-6 needs-validation"> 
+              <!-- Email -->
+              <div class="form-group">
+                <label class="form-label" for="email">
+                  Email Address
+                </label>
+                <input type="email" class="form-control" name="email" placeholder="name@address.com" [(ngModel)]="user.email">
+              </div>
+
+              <!-- Password -->
+              <div class="form-group mb-5 ">
+                <label class="form-label" for="password">
+                 Password
+                </label>
+                <input type="password" class="form-control" name="password" placeholder="Enter your password"  [(ngModel)]="user.password">
+              </div>
+              
+             
+              
+              <!-- Submit -->
+              <button class="btn w-100 btn-primary" type="submit" (click)="onLogin()">
+                Login
+              </button>
+
+            </form>
+
+            <!-- Text -->
+            <p class="mb-0 fs-sm text-center text-muted">
+                Don't have an account yet <a [routerLink]="['/signup']" routerLinkActive="router-link-active" >Sign up</a>.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+ 
+
+ 

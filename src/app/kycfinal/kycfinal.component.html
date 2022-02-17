@@ -1,0 +1,123 @@
+<app-navbar></app-navbar>
+
+
+<div class="tab-content" id="myTabContent" [ngSwitch]="doc">
+    <div class="tab-pane fade show active container" *ngSwitchCase="'passport'">
+      <h5 class="text-secondary font-bold">To avoid delays when verifying account, Please make sure
+        bellow:</h5>
+      <ul class="list-check">
+        <li>Chosen credential must not be expaired.</li>
+        <li>Document should be good condition and clearly visible.</li>
+        <li>Make sure that there is no light glare on the card.</li>
+      </ul>
+      <div class="gaps-2x"></div>
+      <div class="row align-items-center">
+        <div class="col-sm-8">
+          <h5 class="font-mid">Upload Here Your Passport Copy</h5>
+          <div class="custom-dropzone" ngx-dropzone accept="image/jpeg,image/jpg,image/png" [maxFileSize]="6291456" [multiple]="false" (change)="onSelect($event)">
+            <ngx-dropzone-label>
+              <div>
+                <h2>Drag and drop file</h2>
+              </div>
+            </ngx-dropzone-label>
+            <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [removable]="true"
+              (removed)="onRemove(f)">
+              <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+            </ngx-dropzone-image-preview>
+          </div>
+        </div>
+        <div class="col-sm-4 d-none d-sm-block">
+          <div class="mx-md-4"><img src="../../assets/img/icons/vector-passport.png" alt="vector"></div>
+        </div>
+      </div>
+      <button class="btn btn-sm btn-primary lift ms-auto" (click)="onSignup()">Validate</button>
+    </div>
+    <div class="tab-pane fade show active container" *ngSwitchCase="'card'">
+      <h5 class="text-secondary font-bold">To avoid delays when verifying account, Please make sure
+        bellow:</h5>
+      <ul class="list-check">
+        <li>Chosen credential must not be expaired.</li>
+        <li>Document should be good condition and clearly visible.</li>
+        <li>Make sure that there is no light glare on the card.</li>
+      </ul>
+      <div class="gaps-2x"></div>
+      <div class="row align-items-center">
+        <div class="col-sm-8">
+          <h5 class="font-mid">Upload Here Your National id Front Side</h5>
+          <div class="custom-dropzone" ngx-dropzone accept="image/jpeg,image/jpg,image/png" [maxFileSize]="6291456" [multiple]="false" (change)="onSelect($event)">
+            <ngx-dropzone-label>
+              <div>
+                <h2>Drag and drop file</h2>
+              </div>
+            </ngx-dropzone-label>
+            <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [removable]="true"
+              (removed)="onRemove(f)">
+              <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+            </ngx-dropzone-image-preview>
+          </div>
+        </div>
+        <div class="col-sm-4 d-none d-sm-block">
+          <div class="mx-md-4"><img src="../../assets/img/icons/vector-id-front.png" alt="vector"></div>
+        </div>
+      </div>
+      <div class="gaps-3x"></div>
+      <div class="row align-items-center">
+        <div class="col-sm-8">
+          <h5 class="font-mid">Upload Here Your National id Back Side</h5>
+          <div class="custom-dropzone" ngx-dropzone accept="image/jpeg,image/jpg,image/png" [maxFileSize]="6291456" [multiple]="false" (change)="onSelect($event)">
+            <ngx-dropzone-label>
+              <div>
+                <h2>Drag and drop file</h2>
+              </div>
+            </ngx-dropzone-label>
+            <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [removable]="true"
+              (removed)="onRemove(f)">
+              <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+            </ngx-dropzone-image-preview>
+          </div>
+        </div>
+        <div class="col-sm-4 d-none d-sm-block">
+          <div class="mx-md-4"><img src="../../assets/img/icons/vector-id-back.png" alt="vector"></div>
+        </div>
+      </div>
+      <a class="btn btn-sm btn-primary lift ms-auto">Validate</a>
+    </div>
+    <div class="tab-pane fade show active container" *ngSwitchCase="'licence'">
+      <h5 class="text-secondary font-bold">To avoid delays when verifying account, Please make sure
+        bellow:</h5>
+      <ul class="list-check">
+        <li>Chosen credential must not be expaired.</li>
+        <li>Document should be good condition and clearly visible.</li>
+        <li>Make sure that there is no light glare on the card.</li>
+      </ul>
+      <div class="gaps-2x"></div>
+      <div class="row align-items-center">
+        <div class="col-sm-8">
+          <h5 class="font-mid">Upload Here Your Driving Licence Copy</h5>
+          <div class="custom-dropzone" ngx-dropzone accept="image/jpeg,image/jpg,image/png" [maxFileSize]="6291456" [multiple]="false" (change)="onSelect($event)">
+            <ngx-dropzone-label>
+              <div>
+                <h2>Drag and drop file</h2>
+              </div>
+            </ngx-dropzone-label>
+            <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [removable]="true"
+              (removed)="onRemove(f)">
+              <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+            </ngx-dropzone-image-preview>
+          </div>
+        </div>
+        <div class="col-sm-4 d-none d-sm-block">
+          <div class="mx-md-4"><img src="../../assets/img/icons/vector-licence.png" alt="vector"></div>
+        </div>
+      </div>
+      <a class="btn btn-sm btn-primary lift ms-auto">Validate</a>
+    </div>
+    <div *ngSwitchDefault><app-page404></app-page404></div>
+
+
+  </div>
+
+
+
+
+  

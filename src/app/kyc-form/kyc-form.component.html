@@ -1,0 +1,102 @@
+<app-navbar></app-navbar>
+
+
+
+  <div class="page-header page-header-kyc">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7 text-center">
+          <h1 class="page-title text-primary">Begin your ID-Verification</h1>
+          <p class="large">Verify your identity to participate in tokensale.</p>
+        </div>
+      </div>
+    </div><!-- .container -->
+  </div><!-- .page-header -->
+  <div class="page-content">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+          {{client}}
+
+          <div class="form-step-fields card-innr">
+                <div class="form-step-head card-innr">
+                    <h3 class="text-primary">Personal Details</h3>
+                    <p>Your simple personal information required for identification</p>
+              </div><!-- .step-head -->
+
+                <div class="note note-plane note-light-alt note-md pdb-1x">
+                  <p>Please type carefully and fill out the form with your personal details. Your can’t edit these
+                    details once you submitted the form.</p>
+                </div>
+                <div class="row">
+                  
+
+                  <div class="form-group col-md-6">
+                    <label class="form-label" for="Phone">
+                    <span class="text-danger">*</span>Phone Number</label>
+                    <input type="tel" class="form-control" name="phone" [(ngModel)]="profile.phone" pattern="[0-9]{8}" maxlength="8" placeholder="+216" required>
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label class="form-label" for="Date_of_Birth"><span
+                        class="text-danger">*</span>
+                        Date of Birth
+                    </label>
+                    <input type="date" class="form-control" name="date_of_Birth" [(ngModel)]="profile.date_of_Birth" required>
+                    </div>
+
+                </div><!-- .row -->
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label class="form-label" for="Address"><span
+                        class="text-danger">*</span>
+                        Address
+                    </label>
+                    <input type="text" class="form-control" name="address" [(ngModel)]="profile.address" placeholder="Full address" required>
+                    </div>
+                 
+                    <div class="form-group col-md-6">
+                      <label class="form-label" for="city"><span
+                          class="text-danger">*</span>
+                          city
+                      </label>
+                      <input type="text" class="form-control" name="city" [(ngModel)]="profile.city" required>
+                      </div>
+
+                      <div class="form-group col-md-6">
+                        <label class="form-label" for="State"><span
+                            class="text-danger">*</span>
+                            State
+                        </label>
+                        <input type="text" class="form-control" name="State" [(ngModel)]="profile.state" required>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                          <label class="form-label" for="Postal_code"><span
+                              class="text-danger">*</span>
+                              Postal code
+                          </label>
+                          <input type="number" class="form-control" name="postal_code" [(ngModel)]="profile.postal_code" required>
+                          </div>
+                          
+                </div><!-- .row -->
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                  <label class="form-check-label" for="inlineRadio1">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                  <label class="form-check-label" for="inlineRadio2">Female</label>
+                </div>
+              </div>
+              <a [routerLink]="['/kycupload']" routerLinkActive="router-link-active"  class="btn btn-sm btn-primary lift ms-auto">Process for Verify</a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  
+<!--        <div class="gaps-1x"></div><a href="" class="btn btn-primary"></a>
+-->

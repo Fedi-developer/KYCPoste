@@ -1,0 +1,62 @@
+
+<app-navbar></app-navbar>
+
+
+
+  <div class="page-header page-header-kyc">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7 text-center">
+          <h1 class="page-title text-primary">End your ID-Verification</h1>
+          <p class="large">Verify your identity to participate in tokensale.</p>
+        </div>
+      </div>
+    </div><!-- .container -->
+  </div><!-- .page-header -->
+    
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+          <div class="kyc-form-steps card mx-lg-4">
+            
+              <div class="form-step-head card-innr">
+                <div class="step-head">
+                  <div class="step-head-text">
+                    <h3 class="text-primary">Document Upload</h3>
+                    <p>To verify your identity, please upload any of your document</p>
+                  </div>
+                </div>
+              </div><!-- .step-head -->
+              <div class="form-step-fields card-innr">
+                <div class="note note-plane note-light-alt note-md pdb-0-5x">
+                  <p>In order to complete, please upload any of the following personal document.</p>
+                </div>
+                <div class="gaps-2x"></div>
+                <ul class="nav nav-tabs nav-tabs-bordered row flex-wrap guttar-20px" role="tablist">
+                  <li class="nav-item flex-grow-0"><a class="nav-link d-flex align-items-center" data-toggle="tab" 
+                      [routerLink]="['/kycfinal', passport]"
+                      routerLinkActive="router-link-active">
+                      <div class="nav-tabs-icon">
+                          <img src="../../assets/img/icons/icon-passport-color.png" alt="icon"></div><span>Passport</span>
+                    </a></li>
+                  <li class="nav-item flex-grow-0"><a class="nav-link d-flex align-items-center" data-toggle="tab" 
+                    [routerLink]="['/kycfinal', card]"
+                  routerLinkActive="router-link-active">
+                      <div class="nav-tabs-icon">
+                          <img src="../../assets/img/icons/icon-national-id-color.png" alt="icon"></div><span>National Card</span>
+                    </a></li>
+                  <li class="nav-item flex-grow-0"><a class="nav-link d-flex align-items-center" data-toggle="tab"
+                    [routerLink]="['/kycfinal', licence]"
+                    routerLinkActive="router-link-active">
+                      <div class="nav-tabs-icon">
+                          <img src="../../assets/img/icons/icon-licence-color.png" alt="icon"></div><span>Driver’s License</span>
+                    </a></li>
+                </ul><!-- .nav-tabs-line -->
+               
+              </div><!-- .step-fields -->
+           
+          </div><!-- .card -->
+        </div>
+      </div>
+    </div><!-- .container -->
+  

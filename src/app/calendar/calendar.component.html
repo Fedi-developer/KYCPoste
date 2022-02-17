@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <br>
+<div class="row text-center">
+    <div class="col-md-4">
+      <div class="btn-group">
+        <div
+          class="btn btn-outline-secondary"
+          mwlCalendarToday
+          [(viewDate)]="viewDate"
+        >
+          this week
+        </div>
+        <div
+          class="btn btn-primary"
+          mwlCalendarNextView
+          [view]="view"
+          [(viewDate)]="viewDate"
+          (viewDateChange)="closeOpenMonthViewDay()"
+        >
+          Next
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+    </div>
+  
+  </div>
+  <br />
+  <div>
+  
+    <mwl-calendar-week-view
+      [viewDate]="viewDate"
+      [events]="events"
+      [refresh]="refresh"
+      (eventClicked)="handleEvent('Clicked', $event.event)"
+      (eventTimesChanged)="eventTimesChanged($event)"
+    >
+    </mwl-calendar-week-view>
+   
+  </div>
+<br>
+<br>
+<div class="container RDV">
+  <div class="row">
+    <h3>take an RDV</h3>
+  <div class="form-group col-md-6">
+    <input type="datetime-local" class="form-control" name="RDV" required>
+    </div>
+    <div class="col-md-6">
+      <a  class="btn btn-sm btn-primary lift ms-auto">Validate</a>  
+    </div>
+  </div>
+</div>
+</div>
